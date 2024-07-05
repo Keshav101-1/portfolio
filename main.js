@@ -5,3 +5,11 @@ var typed = new Typed(".text", {
     backDelay: 1000,
     loop: true,
 });
+
+
+    document.getElementById('okButton').addEventListener('click', function() {
+        document.getElementById('contactForm').reset();
+        $('#submissionModal').modal('hide');
+    });
+
+

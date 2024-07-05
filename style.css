@@ -30,12 +30,12 @@ body {
 
 
 
-                                  /* Header Ection Starts */
+                                /* Header Section Starts */
 
 
 
 
-                                
+
 .main-header {
     position: fixed;
     top: 0;
@@ -79,10 +79,10 @@ body {
 }
 
 #navbar {
-    background: #233042;
+    background: #233042 !important;
     border-radius: 76px;
     box-shadow: 0 0 36px 0 #8ff3a1;
-    margin: 0px 6px;
+    margin: 0px 17%;
     padding: 0px 34px;
     position: relative;
     z-index: 1;
@@ -95,7 +95,7 @@ body {
 
 
 
-                    /* Home Section is start */
+/* Home Section is start */
 
 
 
@@ -223,11 +223,11 @@ body {
 
 
 
-                               /* About Section Is starts */
+/* About Section Is starts */
 
 
 
-                               
+
 .middle-page {
     height: 100vh;
     display: grid;
@@ -297,9 +297,9 @@ body {
     font-family: cursive;
     text-transform: uppercase;
 }
-                    
 
-                                   /* My Profiles Sections Starts */
+
+/* My Profiles Sections Starts */
 
 
 
@@ -393,7 +393,7 @@ body {
 
 
 
-                            /* MY Skills Sections Start */
+/* MY Skills Sections Start */
 
 
 
@@ -653,7 +653,7 @@ body {
 
 
 
-                                /* Resume Section Starts */
+/* Resume Section Starts */
 
 
 
@@ -682,13 +682,12 @@ body {
 }
 
 
- 
-                    /* Contact Us section Starts */
+
+/* Contact Us section Starts */
 
 
 
-
-.contact-us {    
+.contact-us {
     background-color: #01162a;
     padding: 60px 0;
 }
@@ -727,7 +726,6 @@ body {
     padding: 20px;
     background-color: #113b65;
     box-shadow: 0 0 25px 0 #8ff3a1;
-    
 }
 
 .contact-us .contact h2 {
@@ -764,6 +762,10 @@ textarea {
     resize: vertical;
 }
 
+.form-control {
+    background-color: #e2eaf2 !important;
+}
+
 button[type="submit"] {
     background-color: #0489b1;
     color: white;
@@ -788,8 +790,53 @@ button[type="submit"]:hover {
     box-sizing: border-box;
 }
 
+.modal-content {
+    background-color: #113b65;
+    border-radius: 12px;
+    box-shadow: 0 0 25px 0 #cad1cb;
+    color: #fff;
+}
 
-                            /* Footor Section Start */
+.modal-header {
+    border-bottom: 1px solid #d1dee1;
+    color: #0489b1;
+}
+
+.modal-header .close {
+    padding: 0 5px;
+    color: #ffffff;
+    background-color: #0489b1;
+    border-radius: 25%;
+}
+.modal-header .close:hover{
+    background: #0b4f7db2;
+    color: #0cbcdc;
+    box-shadow: 0 0 3px #15374de0, 0 0 10px #0f486be0;
+}
+.modal-body {
+    background-color: #366593;
+    color: #fff;
+}
+
+.modal-footer {
+    border-top: 1px solid #d1dee1;
+    background-color: #366593;
+}
+
+.modal-footer .btn {
+    background-color: #0489b1;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background: #0b4f7db2;
+    color: #0cbcdc;
+    box-shadow: 0 0 3px #15374de0, 0 0 10px #0f486be0;
+}
+
+/* Footor Section Start */
 
 
 
@@ -897,11 +944,10 @@ footer a:hover {
 @media (max-width: 768px) {
     .main-header {
         padding: 10px 4%;
-        position: relative;
     }
 
     .logo {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .navbar {
@@ -909,34 +955,100 @@ footer a:hover {
     }
 
     .navbar a {
-        font-size: 18px; 
+        font-size: 18px;
         margin-left: 10px;
     }
 
     #navbar {
-        padding: 8px 16px; 
+        padding: 8px 16px;
         margin: 0 4px;
     }
 }
+
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 6%;
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-collapse {
+        background: #233042 !important;
+        border-radius: 76px;
+        box-shadow: 0 0 36px 0 #8ff3a1;
+        margin: 0;
+        padding: 10px 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        opacity: 1;
+        animation: slideTop 1s ease forwards;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    .nav-link:hover {
+        color: #0cbcdc;
+    }
+}
+
 @media (max-width: 768px) {
     .home img {
-        width: 70%; 
+        width: 70%;
     }
 
     .home-content h1 {
-        font-size: 32px; 
+        font-size: 32px;
     }
 
     .home-content p {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .home-sec1 a {
-        font-size: 20px; 
-        margin: 10px; 
+        font-size: 20px;
+        margin: 10px;
     }
 
     .btn-box {
-        padding: 0 50%; 
+        padding: 0 50%;
     }
 }
