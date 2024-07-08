@@ -12,4 +12,3 @@ var typed = new Typed(".text", {
         $('#submissionModal').modal('hide');
     });
 
-
