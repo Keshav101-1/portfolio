@@ -30,8 +30,7 @@ body {
 
 
 
-                                /* Header Section Starts */
-
+/* Header Section Starts */
 
 
 
@@ -40,83 +39,129 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: #011c334d;
+    background: #011c3340;
     width: 100%;
-    padding: 5px 20px;
     border-radius: 0 0 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 100;
-    box-shadow: 0 0 38px 0 #738576;
+    box-shadow: 0 0 20px rgb(108 139 100);
+}
+
+.main-header a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .main-header a:hover {
-    color: #0ed3f5e0;
+    color: #0ed3f5;
 }
 
-.logo {
-    position: relative;
-    color: #ffffff;
+.main-header .logo {
     font-size: 25px;
     font-weight: 600;
     text-decoration: none;
-    /* cursor: default; */
-    opacity: 0;
+ color: #ffffff;
     animation: slideRight 1s ease forwards;
 }
 
-.navbar .nav-link {
-    display: inline-block;
-    color: #ffffff !important;
-    font-size: 25px;
-    font-weight: 500;
+.navbar {
+    background: transparent !important;
+}
+
+.navbar-toggler {
+    background-color: #ffffff88 !important;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 600;
     text-decoration: none;
-    margin-left: 25px;
-    transition: .3s;
-    /* cursor: default; */
-    opacity: 1;
+    transition: color 0.3s ease;
+     opacity: 1;
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.1s * var(--i));
 }
-
-#navbar {
-    background: #011c3300 !important;
-    /* border-radius: 76px;
-    box-shadow: 0 0 36px 0 #8ff3a1; */
-    margin: 0px 17%;
-    padding: 0px 34px;
-    position: relative;
-    z-index: 1;
+.navbar-toggler {
+    background-color: #ffffff88 !important;
+    padding: 8px 10px; /* Adjusted padding */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px; /* Adjusted font size */
 }
 
-.navbar .nav-link:hover {
+.navbar-nav .nav-link:hover {
     color: #0cbcdc !important;
 }
-.navbar-toggler {
-    border: none;
-    color: #ffffff;
-    font-size: 1.5rem; 
-    padding: 5px 10px; 
-    background-color: transparent; 
-    margin-top: 5px;
-    margin-bottom: 5px; 
-}
-.navbar-toggler:focus {
-    outline: none;
-}
-.navbar-toggler-icon {
-    background-color: #000a1300 ;
+
+.navbar-nav .nav-item {
+    margin-left: 25px;
 }
 
-.main-header .logo[href="#contact"] {
-    opacity: 1; 
-    font-size: 25px;
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start offscreen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: right 0.3s ease; /* Animation when right position changes */
+    z-index: 99;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: #0cbcdc;
+    color: #fff;
+}
+
+/* Show sidebar when the show class is added */
+#sidebar.show {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+}
+
+
+
+.main-header .navbar-nav [href="#contact"] {
+    opacity: 1;
     font-weight: 500;
     text-decoration: none;
     transition: .3s;
+    left: -25px;
 }
-
 /* Home Section is start */
 
 
@@ -831,11 +876,13 @@ button[type="submit"]:hover {
     background-color: #0489b1;
     border-radius: 25%;
 }
-.modal-header .close:hover{
+
+.modal-header .close:hover {
     background: #0b4f7db2;
     color: #0cbcdc;
     box-shadow: 0 0 3px #15374de0, 0 0 10px #0f486be0;
 }
+
 .modal-body {
     background-color: #366593;
     color: #fff;
@@ -963,125 +1010,30 @@ footer a:hover {
 }
 
 
-
-@media (max-width: 992px) {
-    .main-header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: #091435f7;
-
-    }
-
-    .navbar-toggler {
-        order: 1;
-    }
+ @media (max-width: 768px) {
 
     .main-header .contact-link {
-        order: 2;
-        margin-left: 20px;
-        display: block;
-    }
-
-    .main-header .logo {
         order: 3;
         font-size: 20px;
         margin-left: auto;
     }
 
-    #navbar {
-        margin: 0;
-        padding: 0;
-        
+    .navbar-nav .nav-link {
+        font-size: 20px;
+        transition: none;
     }
 
     .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
         margin: 0;
     }
-
-    .navbar-nav .nav-link {
-        margin: 10px 0;
-        font-size: 20px;
-    }
-   
-    .navbar-toggler {
-        margin-right: 10px; 
+    .sidebar {
+        right: -250px; 
     }
 
-    .navbar-collapse {
-        left: 0;
-        width: 100%;
-        background: #011c3300; 
-        z-index: 1;
+    .sidebar.active {
+        right: 0;
     }
-    /* for about section */
-    .home {
-        padding: 70px 5%;
-        /* flex-direction: column; */
-        height: auto;
-    }
-
-    .home-content {
-        max-width: 100%;
-        /* text-align: center; */
-        margin-bottom: 20px;
-    }
-
-    .home img {
-        width: 80%;
-        margin: 0 auto 20px;
-    }
-
-    .home-content h1 {
-        font-size: 36px;
-    }
-
-    .home-content h3, .home-content p {
-        font-size: 18px;
-    }
-
-    .home-sec1 a {
-        font-size: 24px;
-    }
-
-    .btn-box {
-        padding: 10px 20px;
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 992px) {
     .main-header .contact-link.d-none.d-lg-block {
         display: none;
     }
-}
-
-
-
-/* @media (max-width: 768px) {
-    .home img {
-        width: 70%;
-    }
-
-    .home-content h1 {
-        font-size: 32px;
-    }
-
-    .home-content p {
-        font-size: 16px;
-    }
-
-    .home-sec1 a {
-        font-size: 20px;
-        margin: 10px;
-    }
-
-    .btn-box {
-        padding: 0 50%;
-    }
-} */
+} 
