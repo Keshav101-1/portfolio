@@ -108,6 +108,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.offcanvas-body .nav-item{
+    padding: 0 0.5rem;
+}
 
 
 
@@ -433,12 +436,12 @@ body {
     background: #f6fcfccc;
 }
 
-.container1 {
-    padding: 45px 90px;
+.technical {
+    padding: 0 70px;
 }
 
-.container2 {
-    padding: 45px 130px;
+.professional {
+    padding: 0 70px;
 }
 
 .heading1 {
@@ -572,10 +575,10 @@ body {
     align-items: flex-start;
 }
 
-
-.radial-bars svg {
+.radial-bars .svg-one{
     position: relative;
-    top: 50%;
+}
+.radial-bars svg {
     width: 100%;
 }
 
@@ -649,18 +652,20 @@ body {
 
 .radial-bars .percentage {
     position: absolute;
-    margin-top: 88px;
-    margin-left: 5%;
-    transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     font-size: 28px;
     font-weight: 600;
     animation: showText 0.5s 1s linear forwards;
     opacity: 0;
     color: #000;
+    top: 50%;
+    left: 50%;
 }
 
 .radial-bars .text {
     color: #056868;
+    text-align: center;
+    padding: 0;
 }
 
 
@@ -729,7 +734,7 @@ body {
 .contact-us .how-to h1,
 .contact-us .how-to p {
     color: #ffffff;
-    text-align: right;
+    text-align: start;
     margin: 0;
 }
 
@@ -798,13 +803,6 @@ button[type="submit"]:hover {
     box-shadow: 0 0 3px #15374de0, 0 0 10px #0f486be0;
 }
 
-.contact-us .col-md-6 {
-    flex: 0 0 48%;
-    max-width: 48%;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
 .modal-content {
     background-color: #113b65;
     border-radius: 12px;
@@ -814,7 +812,7 @@ button[type="submit"]:hover {
 
 .modal-header {
     border-bottom: 1px solid #d1dee1;
-    color: #0489b1;
+    background-color: #366593;
 }
 
 .modal-header .close {
@@ -955,9 +953,13 @@ footer a:hover {
     }
 
 }
-@media (min-width: 768px ) and (max-width: 991.98px){
-    .services-list {
-        gap: 1px;
+@media (min-width: 768px ){
+    .home {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .middle-page {
+        width: auto;
     }
         
     .services-list .card {
@@ -966,7 +968,7 @@ footer a:hover {
 
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 767.5px ) {
 
     .offcanvas.show:not(.hiding),
     .offcanvas.showing {
@@ -1103,10 +1105,33 @@ footer a:hover {
         padding: 40px 25px;
     }
     .heading1{
-        text-underline-offset: none;
+        text-underline-offset: auto;
+        margin-top: 1rem;
+    }
+    .technical{
+        padding: 0 1rem;
+        margin: 0;
     }
     .technical-bar .bar .progress-line{
         width: 100%;
         height: 7px;
+    }
+    .radial-bars .percentage{
+        font-size: 20px;
+        }
+        .contact-us .how-to h1, .contact-us .how-to p{
+            text-align: center;
+        }
+}
+@media (min-width: 767.5px ) and (max-width:991.5px) {
+
+.services-list {
+    gap: 1rem;
+}
+.middle-page{
+    height: 100%;
+}
+.radial-bars .percentage{
+    font-size: 20px;
     }
 }

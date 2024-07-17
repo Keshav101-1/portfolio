@@ -31,7 +31,8 @@
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="#contact">Contact Us</a></h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close" style="color: #fff !important; background-color: rgb(255, 255, 255)"></button>
+                            aria-label="Close"
+                            style="color: #fff !important; background-color: rgb(255, 255, 255)"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
@@ -115,7 +116,7 @@
         </div>
     </section>
 
-    <section class="services" id="profile">   
+    <section class="services" id="profile">
         <div class="container main">
             <h1 class="sub-title">My <span>Profile</span></h1>
             <div class="row services-list">
@@ -179,11 +180,9 @@
                     <h1 class="sub-title">My <span>Skills</span></h1>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="container1" id="skills">
+                    <div class="technical" id="skills">
                         <h3 class="heading1">Technical Skills</h3>
                         <div class="technical-bar">
                             <div class="bar">
@@ -232,50 +231,62 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="container2">
+                    <div class="professional">
                         <h3 class="heading1">Professional Skills</h3>
                         <div class="row">
-                            <div class="col-md-6 col-12">
+                            <div class="col-md-6 col-sm-12 mb-4">
                                 <div class="radial-bars">
-                                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                                    </svg>
-                                    <div class="percentage">90%</div>
+                                    <div class="svg-one">
+                                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                                        </svg>
+                                        <div class="percentage">90%</div>
+                                    </div>
                                     <div class="text">Creativity</div>
                                 </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mb-4">
                                 <div class="radial-bars">
-                                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                                    </svg>
-                                    <div class="percentage">85%</div>
+                                    <div class="svg-one">
+                                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                                        </svg>
+                                        <div class="percentage">85%</div>
+                                    </div>
                                     <div class="text">Communication Skills</div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-12">
+                            <div class="col-md-6 col-sm-12 mb-4">
                                 <div class="radial-bars">
-                                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                                    </svg>
-                                    <div class="percentage">80%</div>
+                                    <div class="svg-one">
+                                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                                        </svg>
+                                        <div class="percentage">80%</div>
+                                    </div>
                                     <div class="text">Time Management</div>
                                 </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mb-4">
                                 <div class="radial-bars">
-                                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                                    </svg>
-                                    <div class="percentage">75%</div>
+                                    <div class="svg-one">
+                                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                                        </svg>
+                                        <div class="percentage">75%</div>
+                                    </div>
                                     <div class="text">Software Development Lifecycle</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
     </section>
 
     <section class="resume" id="resume">
@@ -291,11 +302,11 @@
     <section class="contact-us" id="contact">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 order-md-2 how-to">
+                <div class="col-md-6 md-2 how-to">
                     <h1>Get In Touch</h1>
                     <p>For any inquiries, feel free to reach out to us.</p>
                 </div>
-                <div class="contact col-md-6 order-md-1">
+                <div class="contact col-md-6">
                     <h2>Contact Us</h2>
                     <form id="contactForm" method="POST"
                         onsubmit="event.preventDefault(); $('#submissionModal').modal('show');">
