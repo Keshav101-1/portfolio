@@ -8,13 +8,10 @@ var typed = new Typed(".text", {
 
 
 document.getElementById('okButton').addEventListener('click', function() {
-    // Ensure the form with id 'contactForm' exists
     var form = document.getElementById('contactForm');
     if (form) {
-        form.reset(); // Reset the form fields
+        form.reset(); 
     }
-
-    // Ensure the modal is properly referenced and close it
     $('#submissionModal').modal('hide');
 });
 
